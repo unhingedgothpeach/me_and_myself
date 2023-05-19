@@ -1,0 +1,151 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "main main main"
+    "footer footer footer"
+  ;
+}
+
+.whole-page{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+  /*query so that my screen can fit more nicely */
+  .whole-page {
+    display: flex;
+    max-width: 100%;
+    padding: 0 10px; 
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+
+.nav-link:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.btn{
+  width: 15%;
+  margin: 0 5px;
+}
+
+.btn:hover{
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+.main-container{
+   display: flex;
+   flex-direction: row;
+   background-color: rgba(0, 0, 0, 0.8);
+   color: white;
+   text-align: center;
+   padding-left: 30px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   opacity: 0;
+   animation: fade-in 2s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title{
+  padding-left: 90px;
+  padding-top: 220px;
+  font-size: 20pt;
+}
+
+.quote{
+  font-size: 24px;
+}
+
+.profile-image{
+  margin-top: 1px;
+  padding-right: 5px;
+  width: 50%;
+  opacity: 50%;
+}
+
+
+
+.about-me{
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  margin: 20px;
+}
+
+.expertise{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px 50px;
+}
+
+.expertise-container{
+  min-height: calc(100vh - 650px);
+  display: flex;
+  align-items: top;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+}
+
+.card{
+  margin-top: 15px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.card-body{
+  display: grid;
+  grid-gap: 10px;
+
+}
+
+.icon{
+  height: 90px;
+  opacity: 70%;
+}
+
+.card-title:hover{
+ text-decoration: 1px underline; 
+}
+
+.footer__content {
+  width: 100%;
+  padding-block: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.footer {
+  grid-area: footer;
+}
